@@ -1,0 +1,751 @@
+@import "mixins"
+
+.tour
+  width: 100%
+  height: auto
+  padding-top: 155px
+  &_title
+    width: 100%
+    height: auto
+    padding: 16px
+    display: flex
+    flex-direction: column
+    background: black
+    position: fixed
+    left: 0
+    right: 0
+    top: 60px
+    z-index: 15
+    &-row
+      width: 100%
+      height: auto
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &:nth-child(1)
+        margin-bottom: 16px
+        a
+          font-family: $font-MuseoSansCyrl
+          font-size: 10px
+          line-height: 12px
+          letter-spacing: 0.1em
+          color: #FFFFFF
+          font-weight: bold
+          text-decoration: none
+
+          display: flex
+          flex-direction: column
+          justify-content: flex-start
+          align-items: center
+          .line-active
+            width: 100%
+          span
+            display: block
+            width: 0
+            height: 1px
+            background: white
+            transition: width ease 0.5s
+            margin-top: 6px
+      &-price
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 18px
+        color: #FFFFFF
+        white-space: nowrap
+      &-data
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 11px
+        padding: 10px
+        color: #C6CFBC
+        text-align: center
+      .button-main
+        border: 1px solid #FFD241
+        color: #FFD241
+        background: transparent
+        width: 130px
+        font-size: 10px
+        line-height: 12px
+        height: 30px
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+  &_content
+    width: 100%
+    min-height: 375px
+    height: auto
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../img/3_anons-min_968_504_5_100.png") center top no-repeat
+    background-size: cover
+    padding: 48px 16px 16px 16px
+    position: relative
+    &-title
+      font-family: $font-MuseoSansCyrl
+      font-size: 18px
+      line-height: 22px
+      text-align: center
+      color: #FFFFFF
+    &-dates
+      background: transparent
+      color: #FFD241
+      border: 1px solid #FFD241
+      font-size: 10px
+      line-height: 12px
+      width: 185px
+      min-height: 32px
+      height: auto
+      border-radius: 16px
+      margin: 16px auto
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      font-family: $font-MuseoSansCyrl
+      transition: all ease 0.25s 0.5s
+      z-index: 5
+      position: relative
+      &-active
+        border-radius: 16px 16px 0 0
+        transition: all ease 0.25s
+      &-title
+        height: 100%
+        min-height: 32px
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+          margin-left: 16px
+      &-show-case
+        overflow: hidden
+        overflow-y: auto
+        max-height: 0
+        height: auto
+        transition: all ease 0.5s
+        background: white
+        width: calc(100% + 2px)
+        position: absolute
+        bottom: 0
+        left: -1px
+        right: 0
+        transform: translateY(100%)
+        border-radius: 0 0 16px 16px
+        border-top: none
+        &-active
+          max-height: 250px
+          border: 1px solid #FFD241
+          transition: all ease 0.5s 0.1s
+        ul
+          margin: 16px 28px
+          list-style: none
+          li
+            color: black
+            font-size: 12px
+            padding: 10px 4px
+            font-family: $font-MuseoSansCyrl
+            a,button
+              text-decoration: none
+              outline: none
+              cursor: pointer
+              font-family: $font-MuseoSansCyrl
+              color: black
+              font-size: 12px
+    &-name
+      font-family: $font-MuseoSansCyrl-900
+      font-size: 32px
+      line-height: 40px
+      text-align: center
+      font-weight: 900
+      color: #FFFFFF
+      margin-top: 16px
+      margin-bottom: 16px
+    &-row
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: flex-start
+      flex-wrap: wrap
+      &-container
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+        width: 33%
+        margin-bottom: 16px
+        &-continent
+          background: url("../img/continents/map-empty.svg") center center no-repeat
+          width: 64px
+          height: 40px
+          position: relative
+          &-main
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-position: top center
+
+          .o-header__icon-country--north-america
+            background: url("../img/continents/map-north_america.svg") center center no-repeat
+          .o-header__icon-country--south-america
+            background: url("../img/continents/map-south_america.svg") center center no-repeat
+          .o-header__icon-country--europe
+            background: url("../img/continents/map-europe.svg") center center no-repeat
+          .o-header__icon-country--asia
+            background: url("../img/continents/map-asia.svg") center center no-repeat
+          .o-header__icon-country--africa
+            background: url("../img/continents/map-africa.svg") center center no-repeat
+          .o-header__icon-country--australia
+            background: url("../img/continents/map-australia.svg") center center no-repeat
+          .o-header__icon-country--russia
+            background: url("../img/continents/map-russia.svg") center center no-repeat
+        img
+          height: 40px
+        p
+          font-size: 14px
+          line-height: 17px
+          text-align: center
+          color: #FFFFFF
+          font-family: $font-MuseoSansCyrl
+          margin-top: 8px
+  &_description
+    width: 100%
+    height: auto
+    padding: 16px 16px 32px 16px
+    hr
+      width: 100%
+    &-text
+      font-family: $font-MuseoSansCyrl
+      color: #000000
+      font-size: 14px
+      line-height: 20px
+      padding-bottom: 20px
+      &-warning-main
+        color: #515151
+        font-family: $font-Swift-300
+      &-header
+        font-family: $font-MuseoSansCyrl-100
+        font-weight: 100
+        font-size: 18px
+        line-height: 22px
+      &-warning
+        font-family: $font-Swift-700
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        margin-top: 20px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 16px
+        padding-bottom: 0
+        color: #515151
+        img
+          margin-right: 8px
+          width: 24px
+          height: 24px
+      &-main
+        font-family: $font-Swift-300
+        font-weight: 300
+    &-days
+      width: 100%
+      height: auto
+      padding-bottom: 24px
+
+      font-family: $font-Swift-300
+      font-weight: 300
+      font-size: 14px
+      line-height: 20px
+      color: #515151
+      letter-spacing: .005em
+      ul
+        margin-left: 16px
+      img
+        width: 100%
+        height: auto
+
+      p
+        font-family: $font-Swift-300
+        font-weight: 300
+        font-size: 14px
+        line-height: 20px
+        color: #515151
+        letter-spacing: .005em
+        iframe
+          width: 100%
+          height: auto
+      strong
+        font-family: $font-MuseoSansCyrl-700
+        font-weight: 700
+  &_map
+    width: 100%
+    height: auto
+    position: relative
+    #map
+      height: 767px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &-description
+      width: 100%
+      padding: 32px 16px
+      background: #FFD241
+      &-road
+        font-size: 14px
+        line-height: 17px
+        font-family: $font-MuseoSansCyrl-300
+        color: #313131
+      &-title
+        font-family: $font-MuseoSansCyrl-900
+        font-size: 36px
+        line-height: 43px
+        color: #201f1f
+        margin-top: 24px
+        font-weight: 900
+        margin-bottom: 16px
+  &_program
+    width: 100%
+    height: auto
+    padding: 32px 16px
+    &-case-content-show-options-text
+      display: flex
+      flex-direction: column
+      justify-content: flex-start!important
+      align-items: flex-start!important
+      padding-left: 8px!important
+      p
+        margin-top: 6px
+        &:first-of-type
+          margin-top: 0
+    &-title
+      color: $main-yellow-color
+      font-family: $font-MuseoSansCyrl-900
+      text-align: left
+      font-size: 48px
+      line-height: 50px
+      font-weight: 900
+    &-description
+      display: grid
+      grid-template-columns: 1fr 2fr
+      margin-top: 24px
+      grid-column-gap: 24px
+      grid-row-gap: 24px
+      &-row
+        img
+          width: 12px
+          height: 12px
+          margin-right: 4px
+          margin-top: 4px
+      &-text-black
+        font-family: $font-MuseoSansCyrl-700
+        font-weight: 700
+        text-align: left
+        font-size: 12px
+        line-height: 14px
+        color: #201f1f
+      &-text-gray
+        font-family: $font-Swift-300
+        font-weight: 300
+        text-align: left
+        font-size: 12px
+        line-height: 14px
+        color: #515151
+      .button-main
+        background: transparent
+        border: 1px solid #FFD241
+        width: 220px
+        grid-column-start: 1
+        grid-column-end: 3
+        margin: 32px auto 32px auto
+        font-size: 12px
+        line-height: 14px
+        img
+          transform: rotate(-90deg)
+  &_price
+    width: 100%
+    height: auto
+    padding: 32px 16px
+    background: #FFD241
+    &-text
+      font-family: $font-MuseoSansCyrl-300
+      text-align: left
+      font-size: 12px
+      line-height: 20px
+      color: #000000
+      margin-bottom: 16px
+      &-title
+        font-family: $font-MuseoSansCyrl-700
+        text-align: left
+        font-size: 12px
+        line-height: 20px
+        color: #201f1f
+        margin-bottom: 16px
+    &-data
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border: 2px solid #FFFFFF
+      border-radius: 10px
+      padding: 24px 0
+      margin-bottom: 24px
+      &-data
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #000000
+        opacity: 0.5
+      &-price
+        font-family: $font-MuseoSansCyrl
+        font-size: 36px
+        line-height: 43px
+        text-align: center
+        color: #000000
+        margin-top: 12px
+      .button-main
+        background: white
+        width: 160px
+        margin-top: 16px
+        font-size: 10px
+        line-height: 12px
+    &-dates
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      border: 2px solid #FFFFFF
+      border-radius: 10px
+      padding: 8px 24px 24px 24px
+      margin-bottom: 32px
+      &-data
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #000000
+        opacity: 0.5
+        margin-bottom: 16px
+        margin-top: 16px
+        text-transform: uppercase
+      &-column
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        width: 100%
+        height: auto
+        padding: 12px 0
+        border-bottom: 1px solid #928100
+        &-title
+          font-family: $font-MuseoSansCyrl
+          font-style: normal
+          font-weight: 500
+          font-size: 12px
+          line-height: 14px
+          color: #928100
+          text-transform: uppercase
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding-bottom: 8px
+          & > span
+            width: 160px
+            text-align: center
+            font-weight: inherit
+            font-size: inherit
+            line-height: inherit
+        &-row
+          width: 100%
+          height: auto
+          display: flex
+          justify-content: space-between
+          align-items: center
+          p
+            font-family: $font-MuseoSansCyrl-900
+            font-style: normal
+            font-weight: 900
+            font-size: 20px
+            line-height: 29px
+            color: #000000
+          button
+            font-family: $font-MuseoSansCyrl
+            width: 160px
+            height: 40px
+            background: white
+            border-radius: 30px
+            border: none
+            outline: none
+            font-size: 10px
+            line-height: 12px
+            color: #000000
+            cursor: pointer
+    .text-bold
+      font-size: 18px
+      line-height: 22px
+      font-family: $font-MuseoSansCyrl-900
+      font-weight: 900
+    &-social
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      a
+        width: 76px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 16px
+        border-radius: 30px
+        &:nth-child(1)
+          background: #4C68B3
+        &:nth-child(2)
+          background: #426B9A
+        &:nth-child(3)
+          background: #E27E35
+    &-sub-text
+      font-family: $font-Swift-300
+      font-size: 12px
+      line-height: 14px
+      color: #201f1f
+      margin-top: 48px
+      a
+        text-decoration: underline
+        color: #bdab00
+      &-big
+        font-family: $font-MuseoSansCyrl-900
+        font-weight: 900
+        font-size: 36px
+        line-height: 43px
+        color: #000000
+        margin-top: 48px
+  &_recommended
+    width: 100%
+    height: auto
+    position: relative
+    a
+      text-decoration: none
+    &-container
+      width: 100%
+      height: 250px
+      padding: 16px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-start
+      position: relative
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        object-fit: cover
+      &-text
+        font-family: $font-MuseoSansCyrl
+        font-size: 24px
+        line-height: 29px
+        color: #FFFFFF
+        margin-bottom: 12px
+        z-index: 2
+      &-country
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 14px
+        color: #FFD241
+        letter-spacing: 0.1em
+        z-index: 2
+  &_program-case
+    width: 100%
+    max-height: 0
+    background: #F9F9F0
+    overflow: hidden
+    transition: max-height ease 1.5s, padding-top ease 1.5s 0.25s, padding-left ease 0s 1.5s, padding-right ease 0s 1.5s
+    &-active
+      padding-bottom: 32px
+      transition: max-height ease 1.5s, padding-top ease 1s
+    &-content
+      width: 100%
+      &:nth-child(1)
+        margin-top: 0
+      &-title
+        width: calc(100% - 32px)
+        height: auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        border-bottom: 1px solid #dfdfdf
+        .active
+          img
+            transform: rotate(-90deg)
+        p
+          font-family: $font-MuseoSansCyrl-900
+          font-size: 48px
+          line-height: 77px
+          color: #FFD241
+        span
+          width: 48px
+          height: 48px
+          display: flex
+          justify-content: center
+          align-items: center
+          border: 1px solid #FFD241
+          border-radius: 50%
+          img
+            transition: transform ease 1s
+            transform: rotate(90deg)
+      &-show
+        width: 100%
+        max-height: 0
+        transition: max-height ease 1.5s, padding-bottom ease 1.5s, margin-top ease 1.5s
+        overflow: hidden
+        padding: 0 16px
+        &-active
+          max-height: 2500px
+          padding-bottom: 16px
+          border-bottom: 1px solid #DFDFDF
+          margin-top: 12px
+        & > img
+          min-height: 230px
+        img
+          width: 100%
+          height: auto
+          object-fit: cover
+        &-text
+          font-family: $font-MuseoSansCyrl-300
+          font-size: 14px
+          line-height: 20px
+          color: #515151
+          font-weight: 300
+          margin-top: 32px
+        &-options
+          display: grid
+          grid-template-columns: 1fr
+          margin-top: 16px
+          img
+            width: 100%
+            height: auto
+            max-width: 48px
+          div
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            padding: 8px 0
+            .image-container
+              max-width: 65px
+              width: 100%
+              display: flex
+              align-items: center
+              justify-content: center
+              flex-wrap: wrap
+            .stars
+              img
+                width: 12px
+                height: 12px
+                margin: 0 4px
+          &-title
+            font-family: $font-MuseoSansCyrl-700
+            font-size: 10px
+            line-height: 12px
+            text-align: left
+            color: #201f1f
+            font-weight: 700
+            margin-left: 8px
+            max-width: 100px
+            width: 100%
+            text-transform: uppercase
+          &-text
+            font-family: $font-MuseoSansCyrl
+            font-size: 10px
+            line-height: 12px
+            text-align: left
+            color: #333
+            width: 100%
+            .text-big
+              font-family: $font-MuseoSansCyrl-900
+              font-size: 18px
+              line-height: 22px
+              font-weight: 900
+              color: #201f1f
+        hr
+          margin-top: 24px
+          height: 1px
+          background: #C4C4C4
+  &_gallery
+    width: 100%
+    height: 250px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 12px
+    overflow: hidden
+    button
+      z-index: 3
+      width: 32px
+      height: 32px
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: rgba(255, 255, 255, 0.3)
+      border: 1px solid #FFFFFF
+      border-radius: 50%
+      &:last-of-type
+        img
+          transform: rotate(180deg)
+      img
+        width: 16px
+        height: auto
+      &:focus
+        outline: none
+    &-stage
+      position: absolute
+      z-index: 2
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+
+      width: 100%
+      height: 100%
+
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
+      transition: transform ease 0.75s
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-dots
+      position: absolute
+      bottom: 16px
+      left: 0
+      right: 0
+      z-index: 3
+      width: 100%
+      height: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      .active-dot
+        background-color: #FFFFFF
+      span
+        background-color: rgba(255, 255, 255, 0.5)
+        width: 16px
+        border-radius: 1px
+        height: 3px
+        margin-right: 4px
+        transition: background-color ease 0.25s
+        &:last-of-type
+          margin-right: 0

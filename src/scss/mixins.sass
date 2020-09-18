@@ -1,0 +1,313 @@
+$main-yellow-color: #ffd74b
+$main-red-color: #A90000
+$font-MuseoSansCyrl:  "MuseoSansCyrl-500", sans-serif
+$font-MuseoSansCyrl-100:  "MuseoSansCyrl-100", sans-serif
+$font-MuseoSansCyrl-300:  "MuseoSansCyrl-300", sans-serif
+$font-MuseoSansCyrl-500:  "MuseoSansCyrl-500", sans-serif
+$font-MuseoSansCyrl-700:  "MuseoSansCyrl-700", sans-serif
+$font-MuseoSansCyrl-900:  "MuseoSansCyrl-900", sans-serif
+$font-Rosario:  "Rosario", sans-serif
+$font-SwiftLight: "Swift-Light", sans-serif
+$font-Swift: "Swift", serif
+$font-Swift-300: "Swift-300", serif
+$font-Swift-700: "Swift-700", serif
+
+@font-face
+  font-family: "Swift"
+  src: url("../fonts/Swift.ttf") format("truetype"),url("../fonts/Swift.woff") format("woff"),url("../fonts/Swift.woff2") format("woff2"),url("../fonts/Swift.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Swift-700"
+  src: url("../fonts/Swift-700.ttf") format("truetype"),url("../fonts/Swift-700.woff") format("woff"),url("../fonts/Swift-700.woff2") format("woff2"),url("../fonts/Swift-700.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Swift-300"
+  src: url("../fonts/Swift-300.ttf") format("truetype"),url("../fonts/Swift-300.woff") format("woff"),url("../fonts/Swift-300.woff2") format("woff2"),url("../fonts/Swift-300.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "MuseoSansCyrl-100"
+  src: url("../fonts/MuseoSansCyrl-100.ttf") format("truetype"),url("../fonts/MuseoSansCyrl-100.woff") format("woff"),url("../fonts/MuseoSansCyrl-100.woff2") format("woff2"),url("../fonts/MuseoSansCyrl-100.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "MuseoSansCyrl-300"
+  src: url("../fonts/MuseoSansCyrl-300.ttf") format("truetype"),url("../fonts/MuseoSansCyrl-300.woff") format("woff"),url("../fonts/MuseoSansCyrl-300.woff2") format("woff2"),url("../fonts/MuseoSansCyrl-300.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "MuseoSansCyrl-500"
+  src: url("../fonts/MuseoSansCyrl-500.ttf") format("truetype"),url("../fonts/MuseoSansCyrl-500.woff") format("woff"),url("../fonts/MuseoSansCyrl-500.woff2") format("woff2"),url("../fonts/MuseoSansCyrl-500.eot") format("eot")
+  font-weight: 500
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "MuseoSansCyrl-700"
+  src: url("../fonts/MuseoSansCyrl-700.ttf") format("truetype"),url("../fonts/MuseoSansCyrl-700.woff") format("woff"),url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"),url("../fonts/MuseoSansCyrl-700.eot") format("eot")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "MuseoSansCyrl-900"
+  src: url("../fonts/MuseoSansCyrl-900.ttf") format("truetype"),url("../fonts/MuseoSansCyrl-900.woff") format("woff"),url("../fonts/MuseoSansCyrl-900.woff2") format("woff2"),url("../fonts/MuseoSansCyrl-900.eot") format("eot")
+  font-weight: 900
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Rosario"
+  src: url("../fonts/Rosario-Regular.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Swift"
+  src: url("../fonts/Swift-700.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "SwiftLight"
+  src: url("../fonts/Swift-Light-SC_43144.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "Rubl"
+  src: url('../fonts/Rubl.eot?1443721126')
+  src: url('../fonts/Rubl.eot?&1443721126#iefix') format('embedded-opentype'), url('../fonts/Rubl.woff2?1443721126') format('woff2'), url('../fonts/Rubl.woff?1443721126') format('woff'), url('../fonts/Rubl.ttf?1443721126') format('truetype')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+
+input::placeholder
+  color: #E5E5E5
+
+input
+  &:focus,&:active
+    outline: none
+
+hr
+  background: #C4C4C4
+  margin: 0 auto
+  height: 2px
+  width: calc(100% - 32px)
+  border: none
+
+.current-currency
+  font-family: "Rubl", sans-serif!important
+  line-height: inherit
+  font-size: inherit
+  font-weight: normal!important
+
+.button-main
+  height: 50px
+  border-radius: 30px
+  border: none
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 30px
+  font-family: $font-MuseoSansCyrl
+  font-size: 12px
+  line-height: 14px
+  color: #000000
+  text-decoration: none
+  &:focus,&:active
+    outline: none
+
+.head-btn
+  width: 30px
+  height: 24px
+  display: block
+  position: absolute
+  right: 16px
+  cursor: pointer
+  &-active
+    span
+      &:nth-child(1)
+        top: 50%!important
+        transform: rotate(45deg)!important
+        transition: top .15s, transform .15s .15s!important
+      &:nth-child(2)
+        top: 50%!important
+        transform: rotate(-45deg)!important
+        transition: top .15s, transform .15s .15s!important
+      &:nth-child(3)
+        top: 50%!important
+        transform: rotate(-45deg)!important
+        transition: top .15s, transform .15s .15s!important
+  span
+    position: absolute
+    width: 100%
+    height: 4px
+    background: white
+    &:nth-child(1)
+      top: 0
+      transition: top .15s .15s, transform .15s
+    &:nth-child(2)
+      top: 50%
+      transition: top .15s .15s, transform .15s
+      transform: translateY(-50%)
+    &:nth-child(3)
+      top: 100%
+      transition: top .15s .15s, transform .15s
+      transform: translateY(-100%)
+
+.event-active
+  display: flex!important
+
+.road-close
+  display: none
+
+.text-size
+  font-size: 18px!important
+
+.text-margin
+  margin-top: 24px!important
+
+.text-bold
+  font-weight: bold
+
+.text-center
+  text-align: center
+
+.optional-text
+  text-align: center
+  a,p,li,h2,h3
+    font-family: $font-MuseoSansCyrl
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    color: #C4C4C4
+
+.yellow-container-padding
+  padding-top: 100px!important
+
+.text-comma:before
+  display: block
+  content: '\02BB\02BB'
+  font-family: $font-Rosario
+  position: absolute
+  font-size: 128px
+  left: -36px
+  top: -24px
+  opacity: 0.2
+
+
+.btn-team
+  margin-top: 32px
+  background: $main-yellow-color
+  color: #000000
+  width: 265px!important
+  &-close
+    img
+      transform: rotate(0)!important
+  img
+    transform: rotate(-90deg)
+
+.btn-footer
+  margin: 32px auto 0 auto
+  border: 1px solid #848284
+  background: transparent
+  color: #FFFFFF
+  width: 170px
+  padding: 16px 16px
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  max-height: 50px
+  height: auto
+  border-radius: 17px
+  overflow: hidden
+  transition: max-height ease 1.25s
+  text-transform: uppercase
+  p
+    margin-top: 24px
+    text-transform: uppercase
+    &:first-child
+      margin-top: 0
+  img
+    position: absolute
+    right: 16px
+    top: 20px
+
+.btn-close
+  margin: 0 auto
+  width: 48px
+  height: 48px
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid #000000
+  background: transparent
+  outline: none
+  cursor: pointer
+
+.color-red
+  color: #CC0000!important
+
+.color-black
+  color: #000000!important
+
+.country-color
+  background: white!important
+
+.list-style
+  li:before
+    float: left
+    font-size: 14px
+    margin-right: 8px
+    color: #515151
+
+.mobile-menu-transparent
+  background: transparent
+  transition: all ease 0.75s
+  .head-btn
+    span
+      background: white
+
+.menu-animate
+  opacity: 0
+  transform: translateY(10%)
+  transition: all ease 0.75s
+  &-active
+    z-index: 5
+    opacity: 1
+    transform: translateY(0)
+
+
+.text-gray
+  font-family: $font-MuseoSansCyrl
+  font-size: 10px
+  line-height: 12px
+  color: #C1C1C1
+
+.color-yellow
+  font-family: $font-MuseoSansCyrl
+  font-size: 10px!important
+  text-transform: uppercase
+  color: #FFD241!important
+

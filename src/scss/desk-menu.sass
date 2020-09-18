@@ -1,0 +1,347 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+
+.desc-menu
+  width: 100%
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: #cdcdcd
+  padding-top: 180px
+
+.filter
+  width: 800px
+  height: 95px
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  background-color: white
+
+  margin: 0 auto
+
+  border-radius: 64px
+
+  &__logo
+    width: auto
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+
+    background-color: $main-yellow-color
+
+    padding: 0 24px
+
+    border-top-left-radius: 64px
+    border-bottom-left-radius: 64px
+
+    img
+      height: 32px
+      width: auto
+
+      transform: translateX(5px) translateY(-7px)
+
+  &__options-case
+    width: 100%
+    height: 95px
+
+    max-width: 650px
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background-color: transparent
+
+    border-top-right-radius: 64px
+    border-bottom-right-radius: 64px
+
+    padding: 0 32px
+
+    &--small
+      height: 48px
+      margin: 12px 0
+  &__option
+    width: auto
+    height: auto
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    position: relative
+
+    &:not(:last-of-type)
+      margin-right: 32px
+
+    &-button
+      width: auto
+      height: auto
+
+      display: flex
+      justify-content: center
+      align-items: center
+
+      padding: 12px 24px
+
+      border-top-right-radius: 10px
+      border-top-left-radius: 10px
+
+      cursor: pointer
+      outline: none
+      border: none
+      background-color: transparent
+
+      font-family: $font-MuseoSansCyrl-500
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      color: #010101
+
+      transition: background-color ease 0.5s
+
+      .icon-arrow
+        width: 8px
+        height: 8px
+        margin-left: 8px
+        border-left: 2px solid $main-yellow-color
+        border-top: 2px solid  $main-yellow-color
+        transform: rotate(-135deg)
+        transition: transform ease 0.5s
+        &--black
+          border-left: 2px solid black
+          border-top: 2px solid  black
+    &-dropdown
+      width: auto
+      height: 0
+
+      max-height: 0
+
+      display: flex
+      justify-content: flex-start
+      flex-direction: column
+      align-items: flex-start
+      flex-shrink: 0
+
+      position: absolute
+      left: 0
+      bottom: 0
+
+      z-index: 2
+
+      background-color: #F1F1EA
+
+      transform: translateY(100%)
+      border-radius: 14px
+      border-top-left-radius: 0
+      overflow: hidden
+
+      transition: height ease 0.5s, max-height ease 0.5s, padding ease 0.5s
+
+      &-country
+        width: 340px
+        padding: 0 24px
+        .filter__main-list
+          overflow-y: scroll
+        ::-webkit-scrollbar-button
+          background-repeat: no-repeat
+          width: 5px
+          height: 0
+
+        ::-webkit-scrollbar-track
+          background-color: #959593
+          border-radius: 3px
+
+
+        ::-webkit-scrollbar-thumb
+          -webkit-border-radius: 0
+          background-color: $main-yellow-color
+          border-radius: 3px
+
+        ::-webkit-scrollbar-thumb:hover
+          background-color: $main-yellow-color
+
+        ::-webkit-resizer
+          background-repeat: no-repeat
+          width: 4px
+          height: 0
+
+        ::-webkit-scrollbar
+          width: 5px
+
+        .filter__sub-list-inner
+          li
+            transition: background-color ease 0.25s
+            border-radius: 15px
+            &:hover
+              background-color: $main-yellow-color
+      &-type
+        padding: 0 16px
+        width: 240px
+        .filter__main-list
+          li
+            transition: background-color ease 0.25s
+            border-radius: 15px
+            &:hover
+              background-color: $main-yellow-color
+      &-date
+        padding: 0 8px
+        width: 575px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        left: 50%
+        transform: translateY(100%) translateX(-50%)
+
+        border-top-left-radius: 14px
+
+    &--active
+      .filter__option-button
+        font-family: $font-MuseoSansCyrl
+        font-weight: normal
+        background-color: #F1F1EA
+        .icon-arrow
+          border-left: 2px solid black
+          border-top: 2px solid  black
+          transform: translateY(3px) rotate(45deg)
+
+      .filter__option-dropdown-country
+        padding: 24px 24px
+
+      .filter__option-dropdown-type
+        padding: 24px 16px
+
+      .filter__option-dropdown-date
+        height: calc(315px + 16px)
+        max-height: calc(315px + 16px)
+
+        padding: 8px 8px
+
+
+
+  &__main-list
+    width: 100%
+    height: 100%
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    flex-shrink: 0
+
+    list-style: none
+
+    li
+      width: 100%
+      max-width: 200px
+
+    &-button
+      width: 100%
+      height: 32px
+
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      background-color: transparent
+      outline: none
+      border: none
+
+      font-family: $font-MuseoSansCyrl-500
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 33px
+      color: #000000
+
+  &__sub-list
+    &-wrapper
+      &--active
+        .filter__sub-list-button .icon-arrow
+          transform: translateY(3px) rotate(45deg)
+          border-left: 2px solid black
+          border-top: 2px solid black
+
+    &-inner
+      width: 100%
+      height: 100%
+
+      max-height: 0
+
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      flex-shrink: 0
+
+      padding-left: 4px
+
+      list-style: none
+      overflow: hidden
+
+      transition: max-height ease 0.5s
+    &-button
+      width: 100%
+      height: 32px
+
+      max-width: 200px
+
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      outline: none
+      border: none
+      background-color: transparent
+      cursor: pointer
+
+      font-family: $font-MuseoSansCyrl-500
+      font-weight: 500
+      font-size: 16px
+      color: #000000
+      .icon-arrow
+        width: 8px
+        height: 8px
+        border-left: 2px solid $main-yellow-color
+        border-top: 2px solid  $main-yellow-color
+        transform: rotate(-135deg)
+        transition: transform ease 0.5s
+
+
+
+  &__list-item
+    width: 100%
+    height: 32px
+
+    max-width: 200px
+
+    padding-left: 12px
+
+    flex-shrink: 0
+
+    cursor: pointer
+
+    a
+      width: 100%
+      height: 100%
+
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
+      text-decoration: none
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      color: #000000
+

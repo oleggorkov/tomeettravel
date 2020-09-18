@@ -1,0 +1,1481 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+@import "mixins"
+
+body
+  height: -webkit-fill-available
+  position: relative
+
+input
+  font-family: $font-MuseoSansCyrl
+
+.main-page
+  display: block
+  width: 100%
+  height: 100%
+  &_head
+    width: 100%
+    min-height: 470px
+    padding-bottom: 32px
+    background: url("../img/bghead.jpg") center top no-repeat
+    background-size: calc(1920px / 1.5) calc(1024px / 1.5)
+    position: relative
+    padding-top: 90px
+    &-content
+      width: 280px
+      height: auto
+      margin: 0 auto 0 auto
+      .mobile-menu-main-lists
+        grid-area: list
+        width: 100%!important
+        transition: height ease 1s
+        &-active-countries
+          height: 365px
+        &-active-dates
+          height: calc(330px + 16px + 50px)
+        &-active-type
+          height: calc(400px + 32px + 100px)
+      &-logo
+        grid-area: button-yellow
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        background: $main-yellow-color
+        font-family: $font-MuseoSansCyrl
+        width: auto
+        height: auto
+        border-radius: 30px
+        border: none
+        margin: 0 auto 16px auto
+        font-size: 10px
+        line-height: 8px
+        text-align: center
+        letter-spacing: 0.5em
+        color: #000000
+        img
+          width: auto
+          height: 24px
+          transform: translateY(-5px)
+      .button-main
+        background: white
+        color: $main-red-color
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 14px
+        &:focus,&:active
+          outline: none
+      &-text
+        grid-area: text
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 14px
+        text-align: center
+        color: #FFFFFF
+        margin-top: 16px
+  &_slider
+    width: 100%
+    height: auto
+    background: $main-yellow-color
+    padding: 40px 16px 24px 16px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    h2
+      font-family: $font-MuseoSansCyrl-900
+      font-size: 18px
+      line-height: 22px
+      color: #000000
+      text-align: left
+      margin-top: 20px
+      font-weight: bold
+      text-transform: uppercase
+      &:after
+        display: block
+        content: ''
+        width: 100px
+        height: 4px
+        background: #000000
+        margin-top: 20px
+    .slide-active
+      opacity: 1
+    &-slide
+      display: none
+      opacity: 0
+      transition: ease opacity 0.5s
+    &-sub-title
+      font-family: $font-MuseoSansCyrl
+      font-size: 12px
+      line-height: 14px
+      text-align: left
+      color: #000000
+    &-image
+      width: 100%
+      height: 220px
+      margin-top: 36px
+      object-fit: cover
+      display: block
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-text
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 20px
+      color: #876f26
+      letter-spacing: -.025em
+      margin-top: 28px
+      font-weight: bold
+      display: block
+    &-button
+      display: inline-flex!important
+      margin-top: 28px
+      width: auto
+      background: #FFFFFF
+      color: black
+      text-decoration: none
+      padding: 0 24px!important
+      img
+        transform: rotate(-90deg) translateY(1px) translateX(1px)
+        margin-left: 8px
+    &-navigation
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 24px
+      button
+        text-align: left
+        font-family: $font-MuseoSansCyrl
+        font-size: 7px
+        line-height: 8px
+        letter-spacing: 0.1em
+        color: #000000
+        width: 150px
+        text-decoration: none
+        position: relative
+        border: none
+        background: transparent
+        cursor: pointer
+        outline: none
+        &:first-child
+          padding-left: 20px
+          &:before
+            display: block
+            content: url("../img/btn-arrow.svg")
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%) rotate(90deg)
+        &:last-child
+          padding-right: 20px
+          text-align: right
+          &:after
+            display: block
+            content: url("../img/btn-arrow.svg")
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%) rotate(-90deg)
+  &_content
+    width: 100%
+    padding: 32px 0 0 0
+    &-sub-title
+      font-family: $font-MuseoSansCyrl-700
+      font-size: 18px
+      line-height: 22px
+      text-align: left
+      color: #333
+      margin: 0 16px
+      font-weight: 700
+    &-yellow-container
+      background: $main-yellow-color
+      width: 100%
+      height: auto
+      padding: 40px 48px 32px 48px
+      p
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 20px
+        color: #000000
+      &-title
+        font-family: $font-MuseoSansCyrl
+        font-size: 18px
+        line-height: 22px
+        color: #000000
+        font-weight: bold
+        position: relative
+      &-text
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 20px
+        color: #000000
+        margin-top: 20px
+      &-sub-text
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 14px
+        letter-spacing: 0.1em
+        color: #000000
+        margin-top: 64px
+        position: relative
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .social-icons
+          border: 2px solid rgba(0, 0, 0, 0.51)
+          width: 40px
+          height: 40px
+          border-radius: 50%
+          display: flex
+          justify-content: center
+          align-items: center
+          opacity: 1!important
+        p,span
+          opacity: 0.5
+        a
+          text-decoration: none
+          opacity: 0.5
+          color: #000000
+  &_team
+    width: 100%
+    height: auto
+    padding: 20px 16px 16px 12px
+    background: url("../img/bghead.png") center top no-repeat
+    background-size: cover
+    overflow: hidden
+    transition: max-height ease 5s
+    &-show-case
+      transition: max-height ease 5s
+      overflow: hidden
+      max-height: 0
+      &-active
+        max-height: 2150px
+    &-description
+      width: 100%
+      height: auto
+      padding: 25px 30px
+      border: 1px solid #FFFFFF
+      p
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 20px
+        color: #FFFFFF
+    &-yellow-container
+      width: 100%
+      height: auto
+      padding: 20px 16px 16px 12px
+      background: $main-yellow-color
+      margin-top: 24px
+      margin-bottom: 32px
+      p
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+    &-text
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 20px
+      color: #FFFFFF
+      p,a,li,h2
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 20px
+        color: #FFFFFF
+    ul
+      list-style: none
+      li
+        a
+          font-family: $font-MuseoSansCyrl
+          font-size: 14px
+          line-height: 20px
+          color: #FFFFFF
+          font-weight: normal
+    hr
+      width: 100%
+      background: #FFFFFF
+      margin-top: 16px
+      margin-bottom: 16px
+    &-shadow-box
+      background: rgba(0, 0, 0, 0.31)
+      width: 100%
+      height: auto
+      padding: 24px 32px
+      margin-top: 24px
+
+.product-container
+  width: 100%
+  height: auto
+  margin: 32px 0
+  padding: 0 16px
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  a
+    text-decoration: none
+  &_image
+    width: 100%
+    height: 195px
+    position: relative
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &-price
+      width: auto
+      height: 32px
+      position: absolute
+      left: 0
+      bottom: 0
+      background: $main-yellow-color
+      font-family: $font-MuseoSansCyrl-900
+      font-size: 18px
+      line-height: 28px
+      text-align: center
+      color: #000000
+      font-weight: 900
+      padding: 0 8px 0 10px
+  &-country
+    font-family: $font-MuseoSansCyrl
+    font-size: 9px
+    line-height: 11px
+    text-align: left
+    margin-top: 10px
+    color: #bca600
+    letter-spacing: -.01em
+    text-transform: uppercase
+  &-sub-text
+    font-family: $font-MuseoSansCyrl-700
+    font-size: 18px
+    line-height: 22px
+    text-align: left
+    color: #000000
+    margin-top: 8px
+    font-weight: bold
+  &-sub-text-road
+    font-family: $font-MuseoSansCyrl-300
+    font-size: 9px
+    line-height: 13px
+    text-align: left
+    color: #8C8C8C
+    margin-top: 16px
+  &-sub-text-time
+    font-family: $font-MuseoSansCyrl
+    font-size: 9px
+    line-height: 11px
+    color: #000000
+    margin-top: 15px
+    font-weight: 500
+    .date
+      font-size: 12px
+      line-height: 14px
+  &-sub-text-event
+    font-family: $font-MuseoSansCyrl
+    font-size: 9px
+    line-height: 11px
+    color: #FFFFFF
+    width: 130px
+    height: 20px
+    display: none
+    justify-content: center
+    align-items: center
+    background: #CB0037
+    border-radius: 3px
+    margin-top: 12px
+  &-show-more
+    display: flex
+    justify-content: center
+    align-items: center
+    border: none
+    width: 100%
+    height: 32px
+    font-family: $font-MuseoSansCyrl
+    font-size: 10px
+    line-height: 12px
+    text-align: center
+    color: #8C8C8C
+    margin-top: 32px
+    background: white
+    outline: none
+    cursor: pointer
+    padding: 0 16px
+    img
+      margin-right: 8px
+      width: 24px
+      height: 24px
+  &-country-case
+    padding: 0 16px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin-top: 16px
+    width: 100%
+    height: auto
+    img
+      width: 100%
+      height: auto
+      margin: 16px 0
+    h2,h3
+      font-family: $font-MuseoSansCyrl
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 29px
+      color: #000000
+    p,li,a
+      font-family: $font-MuseoSansCyrl
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 20px
+      color: #515151
+      text-decoration: none
+    ul
+      list-style: none
+
+
+
+.facebook-container
+  width: 100%
+  height: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 32px
+  img
+    width: 100%
+
+
+.footer
+  width: 100%
+  height: auto
+  background: #1C1C1C
+  .active
+    max-height: 160px
+  &-search
+    margin-top: 48px
+    margin-left: 16px
+    margin-right: 16px
+    background: transparent
+    border: none
+    border-bottom: #848284 1px solid
+    color: #848284
+    font-size: 18px
+    line-height: 22px
+    font-family: $font-MuseoSansCyrl
+    width: calc(100% - 32px)
+    border-radius: 0
+    &:focus,&:active
+      outline: none
+    &::placeholder
+      color: #848284
+      font-size: 18px
+      line-height: 22px
+      font-family: $font-MuseoSansCyrl
+  &-menu
+    margin: 32px auto 0 auto
+    width: 100%
+    text-align: center
+    li
+      margin-bottom: 24px
+      a
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+        color: #FFFFFF
+        text-decoration: none
+        text-transform: uppercase
+  &-sub-text
+    font-family: $font-MuseoSansCyrl
+    font-size: 18px
+    line-height: 22px
+    color: #848284
+    text-align: center
+    margin-top: 32px
+  &-row
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 32px
+    img:nth-child(2)
+      margin: 0 16px
+  &-countries
+    margin-top: 46px
+    margin-left: 16px
+    list-style: none
+    max-height: 180px
+    transition: all ease 5s
+    overflow: hidden
+    &-active
+      max-height: 2500px
+    li
+      margin-bottom: 6px
+      a
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        text-decoration: none
+    &-show-more
+      margin-top: 24px
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 17px
+      color: $main-yellow-color
+      text-decoration: underline
+      margin-left: 16px
+  &-subscribe
+    width: 100%
+    height: auto
+    padding: 32px 16px
+    background: #131313
+    margin-top: 46px
+    .application_form-sub-row .label-check
+      color: #FFFFFF
+    .footer-active-state
+      opacity: 1!important
+    &-row
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &-img
+        border: 1px solid #D4D4D4
+        border-radius: 50%
+        width: 60px
+        height: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+    &-text
+      margin-top: 32px
+      text-align: center
+      font-family: $font-MuseoSansCyrl
+      font-size: 18px
+      line-height: 22px
+      color: #FFFFFF
+    form
+      width: 100%
+      height: auto
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      margin-top: 24px
+      transition: opacity ease 0.25s
+      input
+        width: 100%
+        margin-bottom: 16px
+        background: white
+        border-radius: 30px
+        height: 50px
+        padding: 0 32px
+        border: none
+        &:focus,&:active
+          outline: none
+        &::placeholder
+          font-family: $font-MuseoSansCyrl
+          font-size: 14px
+          line-height: 17px
+          color: #cdcdcd
+      button
+        width: 100%
+        background: $main-yellow-color
+        margin-bottom: 16px
+      .error-active
+        opacity: 1!important
+      .application_form-error-row
+        width: 100%
+        height: auto
+        min-height: 40px
+        padding: 8px 0 8px 48px
+        opacity: 0
+        transition: opacity ease 0.25s
+        p
+          text-align: left
+          font-family: $font-MuseoSansCyrl
+          font-weight: 300
+          font-size: 12px
+          line-height: 12px
+          color: #FF0000
+      .application_form-sub-row
+        min-height: 32px
+        a
+          color: white
+        .label-check__new-input
+          border-width: 2px
+          top: 0
+          background-color: transparent
+        .label-check__input:checked + .label-check__new-input
+          background: url("../img/check-white.svg") 50% 25% no-repeat
+          background-size: 75%
+        .label-check__new-input
+          width: 32px
+          height: 32px
+        .label-check
+          padding-left: 48px
+          text-align: left
+          font-size: 12px
+          line-height: 14px
+
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: flex-start
+    &-success
+      width: 100%
+      height: 190px
+      margin-top: 24px
+      display: none
+      opacity: 0
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      transition: opacity ease 0.5s
+      p
+        font-family: $font-MuseoSansCyrl
+        font-weight: normal
+        font-size: 14px
+        line-height: 17px
+        color: #FFFFFF
+        text-align: center
+
+.country-main
+  padding-top: 75px
+  hr
+    background: #d7d7d7
+    height: 1px
+
+.country
+  font-family: $font-MuseoSansCyrl-900
+  font-weight: 900
+  font-size: 36px
+  line-height: 43px
+  color: #000000
+  padding-top: 32px
+  text-align: center
+  margin-bottom: 16px
+  &-main
+    .application
+      padding: 0 16px 32px 16px
+
+.travel
+  width: 100%
+  height: auto
+  padding: calc(75px) 0 32px 0
+  &-title
+    font-family: $font-MuseoSansCyrl-900
+    font-size: 36px
+    line-height: 43px
+    color: #000000
+    padding-top: 32px
+    text-align: center
+    font-weight: 900
+    margin-bottom: 16px
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    height: auto
+    position: relative
+    width: calc(100% - 32px)
+    margin: 24px auto 0 auto
+    &_input-container
+      width: calc(50% - 8px)
+      height: auto
+      position: relative
+      margin-bottom: 8px
+      input
+        width: 100%
+        height: 30px
+        padding: 10px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        font-family: $font-MuseoSansCyrl
+        font-size: 10px
+        line-height: 12px
+        color: #000000
+        position: relative
+        border: 1px solid #FFD241
+        border-radius: 3px
+      label
+        width: 100%
+        height: 30px
+        padding: 10px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        font-family: $font-MuseoSansCyrl
+        font-size: 10px
+        line-height: 12px
+        color: #000000
+        border: 1px solid #FFD241
+        border-radius: 3px
+        position: absolute
+        z-index: 5
+        button
+          width: 24px
+          height: 24px
+          background: transparent
+          border: none
+          outline: none
+          z-index: 7
+          background: url("./../img/cross-gray.svg") center center no-repeat
+    .change-filters
+      width: calc(50% - 8px)
+      height: 30px
+      background: $main-yellow-color
+      border: none
+      border-radius: 15px
+      text-transform: uppercase
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      letter-spacing: 0.1em
+      color: #000000
+      font-family: $font-MuseoSansCyrl
+      position: relative
+      margin: 0 auto 8px auto
+      &:before
+        content: url("../img/icon_more.svg")
+        width: 16px
+        height: 16px
+        position: absolute
+        left: 50%
+        right: 0
+        top: 50%
+        bottom: 0
+        transform: translateX(-50%) translateY(-50%)
+        z-index: 5
+        opacity: 0
+        transition: opacity ease 0.5s
+        animation: loading linear 2s infinite
+      &:after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background: rgba(0, 0, 0, 0.76)
+        z-index: 3
+        border-radius: 15px
+        opacity: 0
+        transition: opacity ease 0.5s
+      &:focus, &:active
+        outline: none
+    .change-filters-active
+      &:after,&:before
+        opacity: 1
+    &-text
+      font-family: $font-MuseoSansCyrl
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      letter-spacing: 0.1em
+      color: #000000
+      &-box
+        background-color: #f1f1e9
+        height: 30px
+        border-radius: 15px
+        width: auto
+        padding: 0 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #ab8f37
+        opacity: 0.5
+      &-gray
+        padding: 0 16px
+        opacity: 0.5
+        color: #ab8f37
+  &-show-more
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 42px
+    img
+      width: 24px
+      height: 24px
+    p
+      font-family: $font-MuseoSansCyrl
+      font-size: 10px
+      line-height: 12px
+      text-align: center
+      letter-spacing: 0.1em
+      color: #ab8f37
+      margin-left: 8px
+
+.navigation
+  width: 100%
+  height: auto
+  margin: 64px auto
+  text-align: left
+  padding: 0 32px
+  ul
+    counter-reset: myCounter2
+    li
+      list-style: none
+      margin-bottom: 16px
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      a
+        color: black
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+    li:before
+      counter-increment: myCounter2
+      content: counter(myCounter2)"."
+      color: black
+      font-family: $font-MuseoSansCyrl
+      text-align: center
+      font-size: 18px
+      margin-right: 24px
+
+
+.mobile-menu-main-lists
+  width: 280px
+  height: auto
+  margin: 0 auto 0 auto
+  user-select: none
+  &-logo
+    grid-area: button-yellow
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    background: $main-yellow-color
+    font-family: $font-MuseoSansCyrl
+    width: 100%
+    height: 50px
+    border-radius: 30px
+    border: none
+    margin: 0 auto
+    font-size: 10px
+    line-height: 8px
+    text-align: center
+    letter-spacing: 0.5em
+    color: #000000
+  .type
+    background: white
+    color: #010101
+    font-family: $font-MuseoSansCyrl
+    font-size: 12px
+    line-height: 14px
+    position: absolute
+    height: 50px
+    border-radius: 30px
+    overflow: hidden
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    padding: 0 12px!important
+    ul
+      li
+        a
+          height: 100%
+          display: flex
+          justify-content: flex-start
+          align-items: center
+  .countries,.dates
+    background: white
+    color: #010101
+    font-family: $font-MuseoSansCyrl
+    font-size: 12px
+    line-height: 14px
+    position: absolute
+    height: 50px
+    border-radius: 30px
+    overflow: hidden
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    padding: 0 24px!important
+  .countries
+    width: 100%
+    left: 0
+    top: 0
+    transition: height ease 0.5s, z-index ease 0s 0.5s
+    align-items: flex-start
+    z-index: 5
+    .countries-list
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      margin-bottom: 16px
+      width: 100%
+      overflow: auto
+      &::-webkit-scrollbar-thumb
+        border: 2px solid white
+        background-color: #ccc
+      &::-webkit-scrollbar
+        -webkit-appearance: none
+      &::-webkit-scrollbar-thumb
+        width: 2px
+        height: 2px
+        border-radius: 2px
+        border: 2px solid white
+        background-color: rgb(100, 100, 100)
+      li
+        margin: 8px 0
+        width: calc(100%)
+        text-align: left!important
+      &-title
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        color: #000000
+        font-weight: bold
+      &-sub-list
+        width: 100%
+        height: 100%
+        max-height: 0
+        z-index: 35!important
+        display: flex!important
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        overflow: hidden
+        transition: all ease 0.5s
+        li
+          a
+            font-family: $font-MuseoSansCyrl
+            font-size: 14px
+            line-height: 24px
+            color: #000000
+            font-weight: normal
+            text-decoration: none
+            text-transform: none
+            width: 100%
+            height: 100%
+            text-align: left
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            padding: 0 8px
+          font-family: $font-MuseoSansCyrl
+          font-size: 14px
+          line-height: 24px
+          color: #000000
+          margin: 0 0 8px 0!important
+          font-weight: normal
+          width: 100%
+          height: 30px
+          display: flex
+          justify-content: flex-start
+          align-items: center
+        .active
+          background: rgba(196, 196, 196, 0.3)
+          border-radius: 15px
+    &-title
+      width: 100%
+      min-height: 50px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      user-select: none
+      a
+        color: #010101
+        font-family: $font-MuseoSansCyrl
+        font-size: 12px
+        line-height: 14px
+        text-decoration: none
+      img
+        transition: transform ease 0.5s
+      &-active
+        color: black!important
+    &-active
+      height: 365px!important
+      transition: height ease 0.5s
+      z-index: 25
+      .countries-title
+        img
+          transform: rotate(180deg)
+  .dates
+    width: 100%
+    top: calc(50px + 16px)
+    right: 0
+    transition: height ease 0.5s, z-index ease 0s 0.5s
+    z-index: 5
+    &-sub-text
+      text-align: center
+      bottom: 12px
+      padding: 0 12px
+      font-family: $font-MuseoSansCyrl
+      font-size: 12px
+      color: #000000
+    &-title
+      width: 100%
+      min-height: 50px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      user-select: none
+      img
+        transition: transform ease 0.5s
+      &-active
+        color: black!important
+    &-active
+      height: 360px!important
+      transition: height ease 0.5s
+      z-index: 25
+      .dates-title
+        img
+          transform: rotate(180deg)
+  .type
+    width: 100%
+    top: calc(100px + 32px)
+    left: 0
+    transition: height ease 0.5s, z-index ease 0s 0.5s
+    z-index: 5
+    ul
+      width: 100%
+      min-height: 320px
+      padding: 0 0 18px 0
+      margin: 0
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      list-style: none
+      li
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: inherit
+        color: #000000
+        text-align: left
+        width: 100%
+        height: calc(17px + 8px)
+        margin: 4px 0
+        font-weight: normal
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        padding-left: 16px
+        a
+          font-family: $font-MuseoSansCyrl
+          font-size: 14px
+          color: #000000
+          text-decoration: none
+          font-weight: normal
+          text-transform: none
+      .active
+        background: rgba(196, 196, 196, 0.3)
+        border-radius: 15px
+    &-title
+      width: 100%
+      min-height: 50px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      user-select: none
+      padding: 0 12px
+      img
+        transition: transform ease 0.5s
+      &-active
+        color: black!important
+    &-active
+      height: 400px!important
+      z-index: 25
+      .type-title
+        img
+          transform: rotate(180deg)
+  .btn-search
+    position: absolute
+    top: calc(150px + 48px)
+    width: 100%
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: transparent
+    border: 1px solid #FFFFFF
+    border-radius: 30px
+    font-family: $font-MuseoSansCyrl
+    font-size: 12px
+    line-height: 14px
+    color: #FFFFFF
+    cursor: pointer
+    &:focus,&:active
+      outline: none
+
+.mobile-menu-transparent .mobile-menu_logo
+  transition: opacity ease 1s
+  opacity: 0
+
+.mobile-menu
+  width: 100%
+  height: 60px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: $main-yellow-color
+  padding: 0 16px
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 55
+  &_logo
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    font-family: $font-MuseoSansCyrl
+    font-size: 10px
+    line-height: 8px
+    text-align: center
+    letter-spacing: 0.5em
+    color: #000000
+    z-index: 25
+    opacity: 1
+    transition: opacity ease 1s
+    text-decoration: none
+    &-active
+      opacity: 1!important
+    img
+      width: auto
+      height: 32px
+  .head-btn
+    position: inherit
+    z-index: 25
+    span
+      background: #000000
+  &-main
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transform: translateX(100%)
+    z-index: 20
+    background: $main-yellow-color
+    transition: all cubic-bezier(0.53,0, 0.25, 0.99) 1s
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-bottom: 48px
+    padding-top: 75px
+    &-lists
+      margin-top: 12px!important
+      width: calc(100% - 48px * 2)!important
+      height: calc((50px * 4) + 48px)
+      position: relative
+      z-index: 30!important
+    &-active
+      transform: translateX(0)
+    ul
+      flex-grow: 1
+      list-style: none
+      margin-bottom: 32px
+      z-index: 3!important
+      li
+        margin-top: 24px
+        font-family: $font-MuseoSansCyrl-900
+        font-size: 16px
+        line-height: 22px
+        letter-spacing: 0.2em
+        color: #141414
+        font-weight: 900
+        text-align: center
+        a
+          text-decoration: none
+          font-family: $font-MuseoSansCyrl-900
+          font-size: 18px
+          line-height: 22px
+          letter-spacing: 0.1em
+          color: #141414
+          font-weight: 900
+          text-align: center
+          text-transform: uppercase
+    &-row
+      &-phone
+        font-family: $font-MuseoSansCyrl
+        font-size: 18px
+        line-height: 29px
+        text-align: center
+        letter-spacing: 0.1em
+        color: #141414!important
+        font-weight: bold
+        text-decoration: none
+        display: block
+        width: 100%
+        a
+          color: #141414!important
+          text-decoration: none
+      .button-main
+        background: transparent
+        width: calc(100% - 48px * 2)
+        margin: 24px auto 0 auto
+        font-size: 12px
+        line-height: 14px
+        border: 1px solid #000000
+        justify-content: center
+        cursor: pointer
+    .btn-search
+      color: black
+      border-color: black
+
+
+.show-case-title-row
+  margin-top: 16px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 16px
+
+.success
+  width: 100%
+  height: calc(100vh)
+  background: #fff
+  z-index: 60
+  .btn-close
+    position: absolute
+    top: 32px
+    left: 50%
+    transform: translateX(-50%)
+  &-case
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    .button-main
+      margin-top: 24px
+      background: #ffd241
+      width: 180px
+    &-main-text
+      font-family: $font-MuseoSansCyrl-900
+      font-style: normal
+      font-weight: 900
+      font-size: 36px
+      line-height: 43px
+      text-align: center
+      color: #000000
+      max-width: 270px
+    &-sub-text
+      font-family: $font-MuseoSansCyrl
+      font-style: normal
+      font-weight: 300
+      font-size: 14px
+      line-height: 17px
+      text-align: center
+      color: #000000
+      margin-top: 32px
+      max-width: 270px
+      &-mail
+        color: #FFD241
+        text-decoration: none
+      &-phone
+        color: #000000
+        font-weight: bold
+        text-decoration: none
+
+.sub-check
+  width: 100%
+  height: auto
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  margin-bottom: 12px
+  &:last-of-type
+    margin-bottom: 0
+  &_input-container
+    width: auto
+    height: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    label
+      width: auto
+      height: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      input:checked + span
+        background: url("../img/check.svg") #FFFFFF 50% 25% no-repeat
+        background-size: 70%
+      input
+        display: none
+      span
+        width: 40px
+        height: 40px
+        display: block
+        background-color: #FFFFFF
+        border: 1px solid #cfcfd1
+        border-radius: 3px
+  &_info
+    margin-left: 16px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    p
+      font-size: 12px
+      line-height: 12px
+      font-family: $font-MuseoSansCyrl
+    &-title
+      color: #000000
+      font-weight: bold
+      &-required
+        color: $main-red-color
+    &-text
+      color: #C1C1C1
+      margin-top: 12px
+      a
+        color: #000000
+
+.inst-container
+  padding: 0 16px
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  background-color: white
+  .main-page_insata-photoes-block
+    margin-top: 24px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    .main-page_insata-image
+      width: calc(33% - 1px)
+      margin-top: 3px
+      &:nth-of-type(1)
+        margin-top: 0
+      &:nth-of-type(2)
+        margin-top: 0
+      &:nth-of-type(3)
+        margin-top: 0
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: auto
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+
+#SubscribePopup .footer-subscribe-success p
+  color: black!important
+
+iframe
+  width: 100%
+  height: auto
+
+.preloader-main
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 1000
+  background-color: rgb(255, 255, 255)
+  opacity: 0
+  transition: opacity ease 0.5s
+  &:after
+    content: url("../img/icon_more.svg")
+    width: 48px
+    height: 48px
+    position: absolute
+    left: 50%
+    right: 0
+    top: 50%
+    bottom: 0
+    transform: translateX(-50%) translateY(-50%)
+    z-index: 5
+    animation: loading linear 4s infinite
+
+
+@keyframes loading
+  from
+    transform: translateX(-50%) translateY(-50%) rotate(0deg)
+  to
+    transform: translateX(-50%) translateY(-50%) rotate(360deg)
+
+
+.date, .date-main-page
+  width: 100%
+  height: auto
+
+.pickmeup .pmu-instance nav .pmu-next, .pickmeup .pmu-instance nav .pmu-prev
+  width: 32px
+  height: 32px
+  transform: scale(2)
+  user-focus: none
+  user-select: none
+  &:hover, &:focus
+    color: black
+    outline: none
+
+.pickmeup
+  background: white
+  width: 100%
+  height: auto
+  .pmu-instance
+    width: 100%
+    height: auto
+    padding-top: 0
+    nav
+      justify-content: space-between
+    .pmu-selected
+      background: rgba(196, 196, 196, 0.3)
+      border-radius: 50%
+    .pmu-today
+      background: $main-yellow-color
+      border-radius: 50%
+    .pmu-days
+      width: 100%
+      height: auto
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      .pmu-selected:first-of-type
+        background: $main-yellow-color!important
+      .pmu-selected:last-of-type
+        background: $main-yellow-color!important
+    .pmu-button
+      color: black
+      display: block
+      line-height: 2.5em
+      width: 2.5em
+    .pmu-not-in-month
+      opacity: 0
+
+
+
+@import "pickmeup"
+@import "tour"
+@import "about"
+@import "application"
+@import "pay"
+@import "search"
+@import "popups"
+@import "@media"

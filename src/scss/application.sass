@@ -1,0 +1,248 @@
+@import "mixins"
+
+
+.application
+  width: 100%
+  height: auto
+  padding: 16px
+  background: #F5F5F5
+  &_title
+    font-family: $font-MuseoSansCyrl-900
+    font-size: 36px
+    line-height: 43px
+    text-align: left
+    font-weight: bold
+    color: #000000
+    margin-top: 16px
+  &_sub-text
+    font-family: $font-MuseoSansCyrl
+    font-size: 14px
+    line-height: 17px
+    color: #CC0000
+    margin-top: 16px
+    &-underline
+      border-bottom: 2px solid #000000
+      width: fit-content
+      padding-bottom: 4px
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 17px
+      color: #000000
+      margin-top: 32px
+  &_form
+    width: 100%
+    height: auto
+    margin-top: 32px
+    &-error-text
+      color: $main-red-color!important
+    &-error-input
+      border: 1px solid $main-red-color!important
+    &-input
+      width: 100%
+      height: 50px
+      border: 1px solid #E7E7E7
+      background: #FFFFFF
+      padding: 0 30px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      border-radius: 3px
+      margin-top: 8px
+      margin-bottom: 20px
+      font-size: 14px
+    &-label
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 17px
+      text-align: left
+      color: #000000
+      font-weight: bold
+      span
+        color: #CC0000
+    &-title
+      border-bottom: 2px solid #000000
+      width: fit-content
+      padding-bottom: 4px
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 17px
+      color: #000000
+      margin-top: 32px
+      margin-bottom: 32px
+    &-row
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      justify-items: center
+      position: relative
+      padding-bottom: 48px
+      margin-bottom: 32px
+      &-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-end
+        .label-check
+          cursor: default
+          position: relative
+          font-family: $font-MuseoSansCyrl
+          font-weight: bold
+          font-size: 10px
+          line-height: 12px
+          color: #000000
+          text-align: center
+          text-transform: uppercase
+        .label-check__input
+          display: none
+        .label-check__new-input
+          position: absolute
+          left: 50%
+          transform: translateX(-50%)
+          bottom: -48px
+          width: 40px
+          height: 40px
+          border: 1px solid #cfcfd1
+          border-radius: 3px
+          background-color: #FFFFFF
+        .label-check__input:checked + .label-check__new-input
+          background: url("../img/check.svg") #FFFFFF 50% 25% no-repeat
+          background-size: 70%
+    &-sub-row
+      width: 100%
+      display: flex
+      .label-check
+        cursor: pointer
+        position: relative
+        font-family: $font-MuseoSansCyrl
+        font-weight: 500
+        font-size: 10px
+        line-height: 12px
+        color: #000000
+        padding-left: 48px
+        width: 100%
+        text-align: left
+        .text-gray
+          position: absolute
+          left: 48px
+          top: 28px
+          width: auto
+          text-align: left
+          font-weight: normal
+      .label-check__input
+        display: none
+      .label-check__new-input
+        position: absolute
+        left: 0
+        top: 4px
+        width: 32px
+        height: 32px
+        border: 1px solid #cfcfd1
+        border-radius: 3px
+        background-color: #FFFFFF
+      .label-check__input:checked + .label-check__new-input
+        background: url("../img/check.svg") #FFFFFF 50% 25% no-repeat
+        background-size: 70%
+    &-required
+      text-align: left
+      font-family: $font-MuseoSansCyrl
+      font-size: 10px
+      line-height: 12px
+      color: #C1C1C1
+      font-weight: normal
+      padding-left: 56px
+      margin-top: 8px
+    &-error-row
+      width: 100%
+      height: auto
+      min-height: 32px
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      opacity: 0
+      transition: opacity ease 0.25s
+      p
+        text-align: left
+        font-family: $font-MuseoSansCyrl
+        font-weight: 300
+        font-size: 12px
+        line-height: normal
+        color: red
+    .button-main
+      background: $main-yellow-color
+      width: 280px
+      margin: 12px auto 0 auto
+      z-index: 10
+      img
+        transform: rotate(-90deg)
+    .verification
+      width: 100%
+      height: auto
+      margin-top: 24px
+      margin-bottom: 8px
+      display: flex
+      justify-content: center
+      align-items: center
+      & > div
+        max-height: 80px
+        iframe
+          max-height: 80px
+  &-booking
+    width: 100%
+    height: auto
+    padding: 24px 42px
+    margin: 24px 0
+    border: 2px solid #7A7A7A
+    border-radius: 10px
+    &_type
+      font-family: $font-MuseoSansCyrl
+      font-size: 14px
+      line-height: 17px
+      text-align: left
+      color: #928100
+      opacity: 0.5
+    &_name
+      font-family: $font-MuseoSansCyrl
+      font-size: 24px
+      line-height: 29px
+      text-align: left
+      font-weight: bold
+      color: #000000
+      margin-top: 12px
+    &_road
+      display: grid
+      grid-template-columns: 32px 170px
+      align-items: end
+      img
+        width: 24px
+        height: 24px
+      &-left
+        grid-column-start: 1
+        grid-column-end: 2
+      &-right
+        grid-column-start: 2
+        grid-column-end: 3
+      &-text-black
+        font-family: $font-MuseoSansCyrl
+        font-size: 18px
+        line-height: 22px
+        text-align: left
+        color: #000000
+        margin-top: 18px
+      &-text-yellow
+        font-family: $font-MuseoSansCyrl
+        font-size: 14px
+        line-height: 17px
+        text-align: left
+        color: #928100
+        opacity: 0.5
+        margin-top: 6px
+      &-line
+        width: 1px
+        background: #7A7A7A
+        height: calc(100% - 4px)
+        margin-left: 10px
+
+.error-active
+  opacity: 1
+
+
+
